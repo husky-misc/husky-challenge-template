@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HuskyChallenge</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <% if session[:current_user_token] %>
+      <p style="text-align: right"><%= link_to('Log Out', logout_invoices_path) %></p>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

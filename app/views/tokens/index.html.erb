@@ -1,0 +1,12 @@
+<div style="color: red;"><%= notice %></div>
+
+<%= form_with url: tokens_path do |f| %>
+  <div>
+    <%= f.label :token %>
+    <%= f.text_field :token %>
+  </div>
+
+  <div>
+    <%= f.submit 'Log In' %>
+  </div>
+<% end %>
